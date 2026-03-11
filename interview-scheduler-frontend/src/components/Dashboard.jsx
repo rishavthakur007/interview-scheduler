@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = "https://interview-scheduler-production-5c57.up.railway.app";
 
 const STATUS_CONFIG = {
   calling:   { label: "Calling...",  color: "#ffd700" },

@@ -182,19 +182,6 @@ h1 {
 
 .divider { height: 1px; background: var(--border); margin: 28px 0; }
 
-.api-notice {
-  margin-bottom: 16px;
-  padding: 14px 16px;
-  background: rgba(255, 101, 132, 0.06);
-  border: 1px solid rgba(255, 101, 132, 0.2);
-  border-radius: 10px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: #ff9aaa;
-  line-height: 1.6;
-}
-.api-notice strong { color: var(--accent2); }
-.api-notice code { background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px; }
 
 .btn {
   width: 100%;

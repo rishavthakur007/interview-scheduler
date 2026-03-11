@@ -6,6 +6,8 @@ import StatsRow from "./components/StatsRow";
 import Dashboard from "./components/Dashboard";
 import "./App.css";
 
+const BACKEND_URL = "https://interview-scheduler-production-5c57.up.railway.app";
+
 const AGENT_ID = import.meta.env.VITE_AGENT_ID;
 const BOLNA_API_KEY = import.meta.env.VITE_BOLNA_API_KEY;
 
@@ -71,7 +73,7 @@ export default function App() {
 
     try {
       // Step 1 — Save to YOUR backend first
-      const saveRes = await fetch("http://localhost:8000/interviews", {
+      const saveRes = await fetch(`${BACKEND_URL}/interviews`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -105,7 +107,7 @@ export default function App() {
 
         // Update backend with the call ID
         await fetch(
-          `http://localhost:8000/interviews/${saveData.interview.id}/callid`,
+          `${BACKEND_URL}/interviews/${saveData.interview.id}/callid`,
           {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },

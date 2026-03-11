@@ -102,10 +102,7 @@ export default function SchedulerForm({ onSchedule, loading }) {
 
       <div className="divider" />
 
-      <div className="api-notice">
-        <strong>⚠️ Setup:</strong> Open <code>src/App.jsx</code> and replace{" "}
-        <code>YOUR_BOLNA_API_KEY</code> with your actual Bolna API key.
-      </div>
+      
 
       <button className="btn" onClick={handleSubmit} disabled={loading}>
         <span className="btn-inner">
