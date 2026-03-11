@@ -16,6 +16,9 @@ app.use(express.json());
 
 // Helper: read database
 const readDB = () => {
+  if (!fs.existsSync(DB_PATH)) {
+    fs.writeFileSync(DB_PATH, JSON.stringify({ interviews: [] }, null, 2));
+  }
   const data = fs.readFileSync(DB_PATH, "utf-8");
   return JSON.parse(data);
 };
